@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+    {% block text %}
+    <h1 class="text">Plug cable into dictaphone.</h1>
+    <h1 class="text">When you have done so, click <i class="button-color">NEXT</i></h1>
+    {% endblock %}
+
+    {% block button %}
+    <!-- form with one button -->
+    <form action="{{ url_for('plugin') }}" method="post">
+        <button type="submit"name="button" class="btn btn-primary button" value="1">NEXT</button>
+    </form>
+    {% endblock %}

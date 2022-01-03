@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+    {% block text %}
+    <h1 class="text">Click <i class="button-color">BEGIN</i> to Begin</h1>
+    {% endblock %}
+
+    {% block button %}
+    <!-- form with one button -->
+    <form action="{{ url_for('begin') }}" method="post">
+        <button type="submit" name="button" class="btn btn-primary button" value="1">BEGIN</button>
+    </form>
+    {% endblock %}

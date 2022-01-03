@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+    {% block text %}
+    <div id="main-text">
+        <h1 class="text">The recording has been sent to the office!</h1>
+        <h1 class="text">You may disconnect the dictaphone. The tape can now be written over.</h1>
+        <h1 class="text">Click <i class="button-color">FINISHED</i></h1>
+    </div>
+    {% endblock %}
+
+    {% block button %}
+    <!-- form with one button -->
+    <form action="{{ url_for('endcard') }}" method="post">
+        <button id="end-button" type="submit" name="button" class="btn btn-primary button" value="1">FINISHED</button>
+    </form>
+    {% endblock %}

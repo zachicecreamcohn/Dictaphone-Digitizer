@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+    {% block text %}
+    <h1 class="text">Please wait while recording is processed.</h1>
+    {% endblock %}
+
+    {% block button %}
+    <!-- form with one button -->
+    <div class="loader"></div>
+    <script>
+        // after 15 seconds, redirect to '/endcard'
+        setTimeout(function() {
+            window.location.href = '/endcard';
+        }, 15000);
+    </script>
+    {% endblock %}

@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+    {% block text %}
+    <h1 class="text">Press PLAY on the dictaphone. The audio will automatically be recorded.</h1>
+    <h1 class="text">When the end of the tape is reached, click <i class="button-color">END OF TAPE</i></h1>
+    {% endblock %}
+
+    {% block button %}
+    <!-- form with one button -->
+    <form action="{{ url_for('play') }}" method="post">
+        <button type="submit"name="button" class="btn btn-primary button" value="1">END OF TAPE</button>
+    </form>
+    {% endblock %}
